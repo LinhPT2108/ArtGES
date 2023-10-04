@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿USE artgroup;
+=======
+﻿
+USE artgroup;
+>>>>>>> dev/nguyentcpc04750
 GO 
 
 INSERT INTO dbo.role
