@@ -5,55 +5,39 @@
 <div class="site-product">
 	<div class="row">
 		<div class="col-xs-12 col-md-7">
-			<form:form  cssClass="row g-3 needs-validation" action="/admin/product/create" method="POST">
+			<form:form cssClass="row g-3 needs-validation"
+				action="/admin/product/create" method="POST">
 				<div class="col-12">
-					<label for="product_name" class="form-label">Tên sản
-						phẩm:</label> <input type="text" class="form-control"
-						id="product_name" value="" required>
+					<label for="product_name" class="form-label">Tên sản phẩm</label> <input
+						type="text" class="form-control" id="product_name" value=""
+						required>
 				</div>
 				<div class="col-md-6">
-					<label for="validationCustom04" class="form-label">State</label> <select
-						class="form-select" id="validationCustom04" required>
+					<label for="category_id" class="form-label">Loại sản phẩm</label> <select
+						class="form-select" id="category_id" required>
 						<option selected disabled value="">Choose...</option>
-						<option>...</option>
+						<c:forEach items="${categories }" var="c">
+							<option value="${c.category_id }">${c.category_name }</option>
+						</c:forEach>
 					</select>
 				</div>
 				<div class="col-md-6">
-					<label for="validationCustomUsername" class="form-label">Username</label>
-					<div class="input-group">
-						<span class="input-group-text" id="inputGroupPrepend">@</span> <input
-							type="text" class="form-control" id="validationCustomUsername"
-							aria-describedby="inputGroupPrepend" required>
-						<div class="invalid-feedback">Please choose a username.</div>
-					</div>
+					<label for="manufacturer_id" class="form-label">Thương hiệu</label>
+					<select class="form-select" id="manufacturer_id" required>
+						<option selected disabled value="">Choose...</option>
+						<c:forEach items="${manufacturer }" var="c">
+							<option value="${c.manufacturer_id }">${c.manufacturer_name }</option>
+						</c:forEach>
+					</select>
 				</div>
 				<div class="col-md-6">
-					<label for="validationCustom03" class="form-label">City</label> <input
-						type="text" class="form-control" id="validationCustom03" required>
-					<div class="invalid-feedback">Please provide a valid city.</div>
+					<label for="price_id" class="form-label">Giá bán</label> <input
+						type="number" class="form-control" id="price_id" required>
 				</div>
-				<div class="col-md-3">
-					<label for="validationCustom04" class="form-label">State</label> <select
-						class="form-select" id="validationCustom04" required>
-						<option selected disabled value="">Choose...</option>
-						<option>...</option>
-					</select>
-					<div class="invalid-feedback">Please select a valid state.</div>
-				</div>
-				<div class="col-md-3">
-					<label for="validationCustom05" class="form-label">Zip</label> <input
-						type="text" class="form-control" id="validationCustom05" required>
-					<div class="invalid-feedback">Please provide a valid zip.</div>
-				</div>
-				<div class="col-12">
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value=""
-							id="invalidCheck" required> <label
-							class="form-check-label" for="invalidCheck"> Agree to
-							terms and conditions </label>
-						<div class="invalid-feedback">You must agree before
-							submitting.</div>
-					</div>
+				<div class="col-md-6">
+					<label for="quantity_in_stock" class="form-label">Số lượng
+						trong kho</label> <input type="number" class="form-control"
+						id="quantity_in_stock" required>
 				</div>
 				<div class="col-12">
 					<label for="" class="form-label mb-3">Thông tin chi tiết:</label>

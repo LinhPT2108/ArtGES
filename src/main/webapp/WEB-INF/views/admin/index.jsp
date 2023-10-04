@@ -73,6 +73,11 @@
 						<li class="sidebar-item"><a class="sidebar-link"
 							href="./ui-typography.html" aria-expanded="false"> <span>
 									<i class="ti ti-users"></i>
+							</span> <span class="hide-menu">Khuyến mãi</span>
+						</a></li>
+						<li class="sidebar-item"><a class="sidebar-link"
+							href="./ui-typography.html" aria-expanded="false"> <span>
+									<i class="ti ti-users"></i>
 							</span> <span class="hide-menu">Tài khoản</span>
 						</a></li>
 						<li class="nav-small-cap"><i
