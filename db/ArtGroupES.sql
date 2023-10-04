@@ -12,7 +12,7 @@ INSERT INTO dbo.user_custom
           fullname ,
           image ,
           password ,
-          role ,
+          role_name ,
           user_id
         )
 VALUES  ( 1 , -- is_del - bit
@@ -613,3 +613,5 @@ VALUES  ( 'QA55Q65A_1.png', -- image - varchar(255)
           'MSAGA-10CRDN8'  -- product_id - varchar(255)
         );
 GO 
+
+
