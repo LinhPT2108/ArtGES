@@ -1,5 +1,7 @@
 package com.art.Entities.Activity;
 
+import org.hibernate.annotations.Nationalized;
+
 import com.art.Entities.User.UserCustom;
 
 import jakarta.persistence.Column;
@@ -14,7 +16,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor 
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Banner {
@@ -24,7 +26,8 @@ public class Banner {
 	private int id;
 	
 	@Column
-	private String bannerName;
+	@Nationalized
+	private String banner_name;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")

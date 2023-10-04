@@ -1,4 +1,4 @@
-package com.art.dao.Activity;
+package com.art.DAO.Activity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

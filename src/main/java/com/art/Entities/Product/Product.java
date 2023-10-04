@@ -1,5 +1,7 @@
 package com.art.Entities.Product;
 
+import org.hibernate.annotations.Nationalized;
+
 import com.art.Entities.User.UserCustom;
 
 import jakarta.persistence.Column;
@@ -19,16 +21,14 @@ public class Product {
 
 	@Id
 	private String prodcut_id;
+	
 	@Column
-	private int price_id;
-	@Column
-	private int image_id;
-	@Column
-	private int description_id;
-	@Column
+	@Nationalized
 	private String product_name;
+	
 	@Column
 	private int quantity_in_stock;
+	
 	@Column
 	private boolean is_del;
 	
@@ -39,6 +39,7 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name="category_id")
 	private Category category;
+	
 	@ManyToOne
 	@JoinColumn(name="manufacturer_id")
 	private Manufacturer manufacturer;

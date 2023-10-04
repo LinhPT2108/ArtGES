@@ -1,5 +1,7 @@
 package com.art.Entities.Product;
 
+import org.hibernate.annotations.Nationalized;
+
 import com.art.Entities.User.UserCustom;
 
 import jakarta.persistence.Column;
@@ -24,6 +26,7 @@ public class Manufacturer {
 	private int manufacturer_id;
 
 	@Column
+	@Nationalized
 	private String manufacturer_name;
 
 	@Column
@@ -32,7 +35,5 @@ public class Manufacturer {
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private UserCustom user;
-	
-	@Column
-	private String product;
+
 }

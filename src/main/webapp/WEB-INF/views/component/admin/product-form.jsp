@@ -1,20 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div class="site-product">
 	<div class="row">
 		<div class="col-xs-12 col-md-7">
-			<form class="row g-3 needs-validation" novalidate>
+			<form:form  cssClass="row g-3 needs-validation" action="/admin/product/create" method="POST">
 				<div class="col-12">
-					<label for="validationCustom01" class="form-label">Tên sản
+					<label for="product_name" class="form-label">Tên sản
 						phẩm:</label> <input type="text" class="form-control"
-						id="validationCustom01" value="" required>
+						id="product_name" value="" required>
 				</div>
 				<div class="col-md-6">
-					<label for="validationCustom02" class="form-label">Last
-						name</label> <input type="text" class="form-control"
-						id="validationCustom02" value="Otto" required>
+					<label for="validationCustom04" class="form-label">State</label> <select
+						class="form-select" id="validationCustom04" required>
+						<option selected disabled value="">Choose...</option>
+						<option>...</option>
+					</select>
 				</div>
 				<div class="col-md-6">
 					<label for="validationCustomUsername" class="form-label">Username</label>
@@ -93,7 +95,7 @@
 					<button class="btn btn-primary" type="submit">Submit form</button>
 				</div>
 
-			</form>
+			</form:form>
 		</div>
 		<div class="col-xs-12 col-md-5">
 			<div class="mb-3">

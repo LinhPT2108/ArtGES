@@ -38,7 +38,7 @@ public class Invoice {
 	private double total_amount;
 
 	@Column
-	private String description;
+	private String note;
 
 	@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
 	private List<InvoiceDetail> invoiceDetails;

@@ -23,6 +23,7 @@ public class Price {
 
 	@Column
 	private double price;
+	
 	@Column
 	private boolean is_use;
 	

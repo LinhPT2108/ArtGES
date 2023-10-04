@@ -1,5 +1,7 @@
 package com.art.Entities.Product;
 
+import org.hibernate.annotations.Nationalized;
+
 import com.art.Entities.User.UserCustom;
 
 import jakarta.persistence.Column;
@@ -24,6 +26,7 @@ public class Category {
 	private int category_id;
 
 	@Column
+	@Nationalized
 	private String category_name;
 
 	@Column
@@ -33,7 +36,5 @@ public class Category {
 	@JoinColumn(name = "user_id")
 	private UserCustom user;
 
-	@Column
-	private String product;
 
 }

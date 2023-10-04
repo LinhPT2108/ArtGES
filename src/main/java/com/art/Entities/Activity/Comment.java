@@ -1,7 +1,8 @@
 package com.art.Entities.Activity;
 
-
 import java.util.Date;
+
+import org.hibernate.annotations.Nationalized;
 
 import com.art.Entities.Product.Product;
 import com.art.Entities.User.UserCustom;
@@ -22,20 +23,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Comment {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
 	@Column
 	private int star;
+	
 	@Column
 	private String image;
+	
 	@Column
+	@Nationalized
 	private String content;
+	
 	@Column
 	private Date date;
+	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private UserCustom user;
+	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
 	private Product product;

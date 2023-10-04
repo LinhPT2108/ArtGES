@@ -1,6 +1,5 @@
 package com.art.Entities.Activity;
 
-
 import com.art.Entities.Product.Product;
 import com.art.Entities.User.UserCustom;
 

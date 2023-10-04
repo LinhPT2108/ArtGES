@@ -1,6 +1,5 @@
 package com.art.Entities.Activity;
 
-
 import java.util.Date;
 
 import com.art.Entities.Product.Product;

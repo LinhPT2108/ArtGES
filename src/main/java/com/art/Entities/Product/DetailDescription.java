@@ -1,5 +1,7 @@
 package com.art.Entities.Product;
 
+import org.hibernate.annotations.Nationalized;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,9 +22,13 @@ public class DetailDescription {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
 	@Column
+	@Nationalized
 	private String tile;
-	@Column
+
+	@Column(columnDefinition = "nvarchar(MAX)")
+	@Nationalized
 	private String description;
 
 	@ManyToOne

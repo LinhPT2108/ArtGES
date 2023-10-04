@@ -1,5 +1,7 @@
 package com.art.Entities.User;
 
+import org.hibernate.annotations.Nationalized;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -17,7 +19,9 @@ public class InforAddress {
 
 	@Id
 	private String phone_number;
+	
 	@Column
+	@Nationalized
 	private String address;
 	
 	@ManyToOne
