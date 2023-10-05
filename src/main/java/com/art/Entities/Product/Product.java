@@ -21,26 +21,29 @@ public class Product {
 
 	@Id
 	private String prodcut_id;
-	
+
 	@Column
 	@Nationalized
 	private String product_name;
-	
+
 	@Column
 	private int quantity_in_stock;
+
+	@Column
+	private double price;
 	
 	@Column
 	private boolean is_del;
-	
+
 	@ManyToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name = "user_id")
 	private UserCustom user;
-	
+
 	@ManyToOne
-	@JoinColumn(name="category_id")
+	@JoinColumn(name = "category_id")
 	private Category category;
-	
+
 	@ManyToOne
-	@JoinColumn(name="manufacturer_id")
+	@JoinColumn(name = "manufacturer_id")
 	private Manufacturer manufacturer;
 }

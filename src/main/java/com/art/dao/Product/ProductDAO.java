@@ -1,4 +1,4 @@
-package com.art.DAO.Product;
+package com.art.dao.Product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
